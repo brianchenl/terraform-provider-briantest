@@ -1,13 +1,12 @@
 terraform {
   required_providers {
     yunjidemo = {
-      source  = "yunji/yunjidemo"
+      source  = "brian/briantest"
     }
   }
 }
 
-resource "yunjidemo_demo" "test" {
-  instance_name  = "yunji"
-  disk_size = "100"
-
+resource "brian_demo" "test" {
+  instance_name  = "brianTest"
+  disk_size = "108"
 }

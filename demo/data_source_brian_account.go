@@ -8,9 +8,9 @@ import (
 	"net/http"
 )
 
-func dataSourceYunjiAccount() *schema.Resource {
+func dataSourceBrianAccount() *schema.Resource {
 	return &schema.Resource{
-		Read: dataSourceYunjiAccountRead,
+		Read: dataSourceBrianAccountRead,
 
 		Schema: map[string]*schema.Schema{
 			"name": {
@@ -21,7 +21,7 @@ func dataSourceYunjiAccount() *schema.Resource {
 	}
 }
 
-func dataSourceYunjiAccountRead(data *schema.ResourceData, meta interface{}) error {
+func dataSourceBrianAccountRead(data *schema.ResourceData, meta interface{}) error {
 	conf := meta.(*Configuration)
 	endpoint := conf.endpoint
 	client := &http.Client{}

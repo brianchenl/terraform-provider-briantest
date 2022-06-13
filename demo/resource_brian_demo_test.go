@@ -8,18 +8,18 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/terraform"
 )
 
-func TestAccYunjiDemo_basic(t *testing.T) {
+func TestAccBrianDemo_basic(t *testing.T) {
 	resource.Test(t, resource.TestCase{
 		PreCheck:     func() { testAccPreCheck(t) },
 		Providers:    testAccProviders,
 		CheckDestroy: testAccCheckPackResourceDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testYunjiDemoPackConfig,
+				Config: testBrianDemoPackConfig,
 				Check: resource.ComposeTestCheckFunc(
-					testEndpointExist("yunjidemo_demo.test"),
-					resource.TestCheckResourceAttr("yunjidemo_demo.test", "instance_name", "yunji"),
-					resource.TestCheckResourceAttr("yunjidemo_demo.test", "disk_size", "100"),
+					testEndpointExist("brian_demo.test"),
+					resource.TestCheckResourceAttr("brian_demo.test", "instance_name", "yunji"),
+					resource.TestCheckResourceAttr("brian_demo.test", "disk_size", "100"),
 				),
 			},
 
@@ -27,9 +27,9 @@ func TestAccYunjiDemo_basic(t *testing.T) {
 	})
 }
 
-var testYunjiDemoPackConfig = `
-resource "yunjidemo_demo" "test" {
-  instance_name  = "yunji"
+var testBrianDemoPackConfig = `
+resource "brian_demo" "test" {
+  instance_name  = "brianTest"
   disk_size = 100
 }
 `

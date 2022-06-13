@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/plugin"
-	demo "terraform-provider-yunjidemo/demo"
+	demo "terraform-provider-briantest/demo"
 )
 
 func main() {
