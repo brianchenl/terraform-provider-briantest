@@ -17,8 +17,8 @@ func TestAccBrianAccountDataSource_basic(t *testing.T) {
 			{
 				Config: testAccCheckBrianAccountDataSourceBasic,
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttrSet("data.brian_account.current", "id"),
-					resource.TestCheckResourceAttrSet("data.brian_account.current", "name"),
+					resource.TestCheckResourceAttrSet("data.briantest_account.current", "id"),
+					resource.TestCheckResourceAttrSet("data.briantest_account.current", "name"),
 				),
 			},
 		},
@@ -26,7 +26,7 @@ func TestAccBrianAccountDataSource_basic(t *testing.T) {
 }
 
 const testAccCheckBrianAccountDataSourceBasic = `
-data "brian_account" "current" {
+data "briantest_account" "current" {
 	name = "ecs"
 }
 `
